@@ -1,12 +1,21 @@
 import { person, personExpense } from "./types";
 import findExpense from "./findExpense";
 
-export default function findIndividualExpense(data: person[]): personExpense[] {
+export default function findIndividualExpense(data: person[]): {
+  totalExpense: number;
+  expensePerPerson: number;
+  individualExpenseReport: personExpense[];
+} {
+  const expenseReport: {
+    totalExpense: number;
+    expensePerPerson: number;
+  } = findExpense(data);
+
   let report: personExpense[] = [],
     expense: number;
 
   data.forEach((e, i) => {
-    expense = e.amountSpent - findExpense(data).expensePerPerson;
+    expense = e.amountSpent - expenseReport.expensePerPerson;
     report[i] = {
       ...e,
       expense: expense,
@@ -16,5 +25,5 @@ export default function findIndividualExpense(data: person[]): personExpense[] {
     };
   });
 
-  return report;
+  return { ...expenseReport, individualExpenseReport: report };
 }

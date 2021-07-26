@@ -11,12 +11,14 @@ describe("Expense Calculations", () => {
   });
 
   test("Length of output array", () => {
-    expect(findIndividualExpense(data1).length).toBe(data1.length);
+    expect(findIndividualExpense(data1).individualExpenseReport.length).toBe(
+      data1.length
+    );
   });
 
   test("find Right amount to recieve", () => {
     var sum = 0;
-    findIndividualExpense(data1).map((current) => {
+    findIndividualExpense(data1).individualExpenseReport.map((current) => {
       sum + current.expense;
     });
     expect(sum).toBe(0);
