@@ -1,9 +1,26 @@
-export interface CalculatorPageProps {}
+import * as React from "react";
+import AddIndividualExpenses from "../components/AddIndividualExpenses";
+import IndividualExpenseDetails from "../components/IndividualExpenseDetails";
+import { useStateToContext } from "../hooks/useStateToContext";
 
-const CalculatorPage: CalculatorPageProps = () => {
+export interface Person {
+  name: string;
+  amount: number;
+}
+
+export const calculatorContext = React.createContext<{
+  stateData: Person[] | null;
+  setStateFunction: React.Dispatch<React.SetStateAction<Person[]>>;
+}>(null);
+
+const CalculatorPage = () => {
+  const data = useStateToContext<Person[] | null>(null);
+
   return (
     <div>
-      <h1>Calculator</h1>
+      <calculatorContext.Provider value={data}>
+        <AddIndividualExpenses />
+      </calculatorContext.Provider>
     </div>
   );
 };
