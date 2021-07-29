@@ -1,6 +1,6 @@
 import findExpense from "../findExpense";
 import findIndividualExpense from "../findIndividualExpense";
-import { person } from "../types";
+import { Person } from "../../pages/calculator";
 import { data1 } from "../mockData";
 
 describe("Expense Calculations", () => {

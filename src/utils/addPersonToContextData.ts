@@ -1,7 +1,7 @@
 import { validateAmount } from "./formValidation";
 import { Person } from "../pages/calculator";
 
-export default function handleSubmit(
+export default function addPersonToContextData(
   e: React.FormEvent<HTMLFormElement>,
   name: string,
   amount: string,

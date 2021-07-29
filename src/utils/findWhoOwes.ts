@@ -1,22 +1,21 @@
 import findIndividualExpense from "./findIndividualExpense";
-import { person, personExpense, personOweDetails } from "./types";
+import { Person } from "../pages/calculator";
+import { PersonExpense, PersonOweDetails, ReportInterface } from "./types";
 
-export default function findWhoOwes(data: person[]): {
-  totalExpense: number;
-  expensePerPerson: number;
-  individualExpenseReport: personExpense[];
-  whoOwesReport: personOweDetails[];
-} {
+export default function findWhoOwes(data: Person[]): ReportInterface {
   const expenseData = findIndividualExpense(data);
+  const ReportExpenseData = findIndividualExpense(data);
 
-  let report: personOweDetails[] = [],
+  // console.log(expenseData, ReportExpenseData);
+
+  let report: PersonOweDetails[] = [],
     oweDetails: { oweWho: string; oweHowMuch: number };
 
   let loaneeList = expenseData.individualExpenseReport.filter(
-    (e) => e.expense < 0
+    (e) => e.expenseStatus === "Less"
   );
-  let loanerList = expenseData.individualExpenseReport.filter(
-    (e) => e.expense > 0
+  const loanerList = expenseData.individualExpenseReport.filter(
+    (e) => e.expenseStatus === "More"
   );
 
   loanerList.forEach((loaner) => {
@@ -49,5 +48,5 @@ export default function findWhoOwes(data: person[]): {
   if (loaneeList.length != 0) {
     throw new Error("Find Who Owes Who Algorithm not working Properly !");
   }
-  return { ...expenseData, whoOwesReport: report };
+  return { ...ReportExpenseData, whoOwesReport: report };
 }

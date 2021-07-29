@@ -3,70 +3,70 @@ import { person, personOweDetails } from "./types";
 export const data1: person[] = [
   {
     name: "jaison",
-    amountSpent: 200,
+    amount: 200,
   },
   {
     name: "Mark",
-    amountSpent: 1200,
+    amount: 1200,
   },
   {
     name: "Sanjay",
-    amountSpent: 200,
+    amount: 200,
   },
   {
     name: "Jacob",
-    amountSpent: 400,
+    amount: 400,
   },
 ];
 export const data2: person[] = [
   {
     name: "A",
-    amountSpent: 300,
+    amount: 300,
   },
   {
     name: "B",
-    amountSpent: 150,
+    amount: 150,
   },
   {
     name: "C",
-    amountSpent: 50,
+    amount: 50,
   },
   {
     name: "D",
-    amountSpent: 400,
+    amount: 400,
   },
   {
     name: "E",
-    amountSpent: 100,
+    amount: 100,
   },
 ];
 export const data3: person[] = [
   {
     name: "A",
-    amountSpent: 100,
+    amount: 100,
   },
   {
     name: "B",
-    amountSpent: 150,
+    amount: 150,
   },
   {
     name: "C",
-    amountSpent: 200,
+    amount: 200,
   },
   {
     name: "D",
-    amountSpent: 400,
+    amount: 400,
   },
   {
     name: "E",
-    amountSpent: 150,
+    amount: 150,
   },
 ];
 
 export const result1: personOweDetails[] = [
   {
     name: "jaison",
-    amountSpent: 200,
+    amount: 200,
     expense: 0,
     expenseStatus: "Less",
     oweWho: "Mark",
@@ -75,7 +75,7 @@ export const result1: personOweDetails[] = [
 
   {
     name: "Sanjay",
-    amountSpent: 200,
+    amount: 200,
     expense: 0,
     expenseStatus: "Less",
     oweWho: "Mark",
@@ -83,7 +83,7 @@ export const result1: personOweDetails[] = [
   },
   {
     name: "Jacob",
-    amountSpent: 400,
+    amount: 400,
     expense: 0,
     expenseStatus: "Less",
     oweWho: "Mark",
@@ -94,7 +94,7 @@ export const result1: personOweDetails[] = [
 export const result2: personOweDetails[] = [
   {
     name: "B",
-    amountSpent: 150,
+    amount: 150,
     expense: 0,
     expenseStatus: "Less",
     oweWho: "A",
@@ -102,7 +102,7 @@ export const result2: personOweDetails[] = [
   },
   {
     name: "C",
-    amountSpent: 50,
+    amount: 50,
     expense: 100,
     expenseStatus: "Less",
     oweWho: "A",
@@ -110,7 +110,7 @@ export const result2: personOweDetails[] = [
   },
   {
     name: "C",
-    amountSpent: 50,
+    amount: 50,
     expense: 0,
     expenseStatus: "Less",
     oweWho: "D",
@@ -118,7 +118,7 @@ export const result2: personOweDetails[] = [
   },
   {
     name: "E",
-    amountSpent: 100,
+    amount: 100,
     expense: 0,
     expenseStatus: "Less",
     oweWho: "D",
@@ -129,7 +129,7 @@ export const result2: personOweDetails[] = [
 export const result3: personOweDetails[] = [
   {
     name: "A",
-    amountSpent: 100,
+    amount: 100,
     expense: 0,
     expenseStatus: "Less",
     oweWho: "D",
@@ -137,7 +137,7 @@ export const result3: personOweDetails[] = [
   },
   {
     name: "B",
-    amountSpent: 150,
+    amount: 150,
     expense: 0,
     expenseStatus: "Less",
     oweWho: "D",
@@ -145,7 +145,7 @@ export const result3: personOweDetails[] = [
   },
   {
     name: "E",
-    amountSpent: 150,
+    amount: 150,
     expense: 0,
     expenseStatus: "Less",
     oweWho: "D",

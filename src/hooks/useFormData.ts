@@ -10,7 +10,7 @@ const useFormData = (
   (e: React.ChangeEvent<HTMLInputElement>) => void,
   string
 ] => {
-  const [state, setState] = React.useState(initial);
+  const [state, setState] = React.useState<string>(initial);
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setState(e.target.value);
   };

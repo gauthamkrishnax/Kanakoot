@@ -1,7 +1,6 @@
 import * as React from "react";
-import AddIndividualExpenses from "../components/AddIndividualExpenses";
-import IndividualExpenseDetails from "../components/IndividualExpenseDetails";
-import { useStateToContext } from "../hooks/useStateToContext";
+import Expenses from "../components/Expenses";
+import { useStateWithDispatch } from "../hooks/useStateWithDispatch";
 
 export interface Person {
   name: string;
@@ -14,12 +13,12 @@ export const calculatorContext = React.createContext<{
 }>(null);
 
 const CalculatorPage = () => {
-  const data = useStateToContext<Person[] | null>(null);
+  const data = useStateWithDispatch<Person[] | null>(null);
 
   return (
     <div>
       <calculatorContext.Provider value={data}>
-        <AddIndividualExpenses />
+        <Expenses />
       </calculatorContext.Provider>
     </div>
   );

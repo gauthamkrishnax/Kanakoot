@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export function useStateToContext<T>(initial: T): {
+export function useStateWithDispatch<T>(initial: T): {
   stateData: T | null;
   setStateFunction: React.Dispatch<React.SetStateAction<T>>;
 } {

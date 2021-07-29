@@ -1,21 +1,22 @@
-import { person, personExpense } from "./types";
+import { Person } from "../pages/calculator";
+import { PersonExpense } from "./types";
 import findExpense from "./findExpense";
 
-export default function findIndividualExpense(data: person[]): {
+export default function findIndividualExpense(data: Person[]): {
   totalExpense: number;
   expensePerPerson: number;
-  individualExpenseReport: personExpense[];
+  individualExpenseReport: PersonExpense[];
 } {
   const expenseReport: {
     totalExpense: number;
     expensePerPerson: number;
   } = findExpense(data);
 
-  let report: personExpense[] = [],
+  let report: PersonExpense[] = [],
     expense: number;
 
   data.forEach((e, i) => {
-    expense = e.amountSpent - expenseReport.expensePerPerson;
+    expense = e.amount - expenseReport.expensePerPerson;
     report[i] = {
       ...e,
       expense: expense,
@@ -24,6 +25,7 @@ export default function findIndividualExpense(data: person[]): {
       }`,
     };
   });
+  console.log(report);
 
   return { ...expenseReport, individualExpenseReport: report };
 }

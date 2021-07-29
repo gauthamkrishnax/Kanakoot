@@ -1,36 +1,47 @@
 import * as React from "react";
-import { useContext, useRef } from "react";
-import useFormData from "../hooks/useFormData";
-import { calculatorContext } from "../pages/calculator";
-import { validateAmount, validateName } from "../utils/formValidation";
 import addPersonToContextData from "../utils/addPersonToContextData";
-import IndividualExpenseDetails from "./IndividualExpenseDetails";
-import { useEffect } from "react";
+import { validateName, validateAmount } from "../utils/formValidation";
+import { useRef, useEffect, useContext } from "react";
+import { calculatorContext, Person } from "../pages/calculator";
 
-const AddIndividualExpenses = () => {
+export interface AddIndividualFormProp {
+  formprop: {
+    name: string;
+    amount: string;
+    setName: React.Dispatch<any>;
+    setAmount: React.Dispatch<any>;
+    nameChange: (e: React.ChangeEvent<any>) => void;
+    amountChange: (e: React.ChangeEvent<any>) => void;
+    amountWarning: string;
+    nameWarning: string;
+  };
+}
+
+const AddIndividualForm = ({
+  formprop: {
+    name,
+    amount,
+    setName,
+    setAmount,
+    nameChange,
+    amountChange,
+    nameWarning,
+    amountWarning,
+  },
+}: AddIndividualFormProp) => {
   const data = useContext(calculatorContext);
   const nameRef = useRef(null);
   useEffect(() => {
     nameRef.current.focus();
   }, []);
 
-  const [name, setName, nameChange, nameWarning] = useFormData(
-    "",
-    validateName,
-    data.stateData
-  );
-
-  const [amount, setAmount, amountChange, amountWarning] = useFormData(
-    "",
-    validateAmount
-  );
-
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     addPersonToContextData(e, name, amount, data, setName, setAmount, nameRef);
   }
 
   return (
-    <div>
+    <>
+      {" "}
       <h6>Add Individual Expenses :</h6>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">
@@ -58,10 +69,9 @@ const AddIndividualExpenses = () => {
         ) : (
           <input type="submit" value="Submit" />
         )}
-      </form>
-      <IndividualExpenseDetails />
-    </div>
+      </form>{" "}
+    </>
   );
 };
 
-export default AddIndividualExpenses;
+export default AddIndividualForm;
