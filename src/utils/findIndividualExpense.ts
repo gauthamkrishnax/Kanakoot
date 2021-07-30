@@ -25,7 +25,5 @@ export default function findIndividualExpense(data: Person[]): {
       }`,
     };
   });
-  console.log(report);
-
   return { ...expenseReport, individualExpenseReport: report };
 }

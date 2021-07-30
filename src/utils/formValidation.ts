@@ -1,6 +1,7 @@
-import { person } from "./types";
+import { Person } from "../pages/calculator";
+import { ReportInterface } from "./types";
 
-export function validateName(name: string, data: person[]): string | null {
+export function validateName(name: string, data: Person[]): string | null {
   let warning: string | null = null;
   if (data)
     data.forEach((person) => {
@@ -11,8 +12,11 @@ export function validateName(name: string, data: person[]): string | null {
   return warning;
 }
 
-export function validateAmount(amount: number): string | null {
+export function validateAmount(amount: number, name: string): string | null {
   let warning: string | null = null;
+  if (name == null) {
+    warning = null;
+  }
   if (isNaN(amount)) {
     warning = "Amount Not a Number. Please enter only digits !";
   }

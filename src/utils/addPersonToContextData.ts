@@ -1,4 +1,4 @@
-import { validateAmount } from "./formValidation";
+import { validateAmount, validateName } from "./formValidation";
 import { Person } from "../pages/calculator";
 
 export default function addPersonToContextData(
@@ -14,13 +14,19 @@ export default function addPersonToContextData(
   focusRef: React.MutableRefObject<any>
 ) {
   e.preventDefault();
-  if (validateAmount(parseFloat(amount))) {
-  }
+  let sameName = false;
   if (data.stateData) {
+    data.stateData.forEach((e) => {
+      if (e.name === name) {
+        e.amount += parseFloat(amount);
+        sameName = true;
+      }
+    });
     data.stateData.push({
       name: name,
       amount: parseFloat(amount),
     });
+    if (sameName) data.stateData.pop();
   } else {
     data.stateData = [
       {
@@ -29,7 +35,9 @@ export default function addPersonToContextData(
       },
     ];
   }
-  data.setStateFunction(data.stateData);
+  console.log(2);
+
+  data.setStateFunction([...data.stateData]);
   setName("");
   setAmount("");
   focusRef.current.focus();

@@ -29,7 +29,7 @@ const AddIndividualForm = ({
     amountWarning,
   },
 }: AddIndividualFormProp) => {
-  const data = useContext(calculatorContext);
+  const { data, report } = useContext(calculatorContext);
   const nameRef = useRef(null);
   useEffect(() => {
     nameRef.current.focus();
@@ -64,10 +64,11 @@ const AddIndividualForm = ({
           />
         </label>
         <span>{amountWarning || nameWarning}</span>
-        {validateAmount(parseFloat(amount)) ? (
-          <input type="submit" value="Submit" disabled />
+
+        {validateAmount(parseFloat(amount), name) ? (
+          <input type="submit" value="Add Person" disabled />
         ) : (
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Add Person" />
         )}
       </form>{" "}
     </>

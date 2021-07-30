@@ -5,16 +5,12 @@ import CalculateButton from "./CalculateButton";
 import PersonListElement from "./PersonListElement";
 import { ReportInterface } from "../utils/types";
 
-const IndividualExpenseDetails = ({
-  setReport,
-}: {
-  setReport: React.Dispatch<React.SetStateAction<ReportInterface>>;
-}) => {
-  const { stateData } = useContext(calculatorContext);
+const IndividualExpenseDetails = () => {
+  const { data } = useContext(calculatorContext);
   return (
-    <ul>
-      {stateData ? (
-        stateData.map((person, i) => (
+    <ol>
+      {data.stateData ? (
+        data.stateData.map((person, i) => (
           <PersonListElement
             name={person.name}
             amount={person.amount}
@@ -22,10 +18,10 @@ const IndividualExpenseDetails = ({
           />
         ))
       ) : (
-        <span>No data Added !</span>
+        <span>No data Added ! </span>
       )}
-      <CalculateButton setReport={setReport} />
-    </ul>
+      <CalculateButton />
+    </ol>
   );
 };
 

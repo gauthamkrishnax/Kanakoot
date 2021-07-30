@@ -11,7 +11,7 @@ import { ReportInterface } from "../utils/types";
 import { useStateWithDispatch } from "../hooks/useStateWithDispatch";
 
 const Expenses = () => {
-  const data = useContext(calculatorContext);
+  const { data, report } = useContext(calculatorContext);
 
   const [name, setName, nameChange, nameWarning] = useFormData(
     "",
@@ -35,13 +35,9 @@ const Expenses = () => {
     amountWarning: amountWarning,
   };
 
-  const report = useStateWithDispatch<ReportInterface | null>(null);
-
   return (
     <div>
       <AddIndividualForm formprop={prop} />
-      <IndividualExpenseDetails setReport={report.setStateFunction} />
-      <Report report={report} />
     </div>
   );
 };

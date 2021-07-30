@@ -4,19 +4,28 @@ import { PersonExpense, PersonOweDetails, ReportInterface } from "./types";
 
 export default function findWhoOwes(data: Person[]): ReportInterface {
   const expenseData = findIndividualExpense(data);
-  const ReportExpenseData = findIndividualExpense(data);
-
-  // console.log(expenseData, ReportExpenseData);
 
   let report: PersonOweDetails[] = [],
     oweDetails: { oweWho: string; oweHowMuch: number };
 
-  let loaneeList = expenseData.individualExpenseReport.filter(
-    (e) => e.expenseStatus === "Less"
-  );
-  const loanerList = expenseData.individualExpenseReport.filter(
-    (e) => e.expenseStatus === "More"
-  );
+  let loaneeList: PersonExpense[] = [];
+  let loanerList: PersonExpense[] = [];
+  let temp: PersonExpense = {
+    expense: 0,
+    expenseStatus: "Equal",
+    name: "",
+    amount: 0,
+  };
+
+  expenseData.individualExpenseReport.forEach((e) => {
+    if (e.expenseStatus === "Less") {
+      temp = Object.assign({}, e);
+      loaneeList.push(temp);
+    } else if (e.expenseStatus === "More") {
+      temp = Object.assign({}, e);
+      loanerList.push(temp);
+    }
+  });
 
   loanerList.forEach((loaner) => {
     loaneeList.forEach((loanee) => {
@@ -45,8 +54,9 @@ export default function findWhoOwes(data: Person[]): ReportInterface {
       }
     });
   });
-  if (loaneeList.length != 0) {
-    throw new Error("Find Who Owes Who Algorithm not working Properly !");
-  }
-  return { ...ReportExpenseData, whoOwesReport: report };
+  // if (loaneeList.length != 0) {
+  //   throw new Error("Find Who Owes Who Algorithm not working Properly !");
+  // }
+
+  return { ...expenseData, whoOwesReport: report };
 }
