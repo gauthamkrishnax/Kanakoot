@@ -34,7 +34,6 @@ const Expenses = () => {
     amountChange: amountChange,
     amountWarning: amountWarning,
   };
-
   return (
     <div>
       <AddIndividualForm formprop={prop} />

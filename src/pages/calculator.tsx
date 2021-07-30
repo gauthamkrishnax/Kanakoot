@@ -4,6 +4,8 @@ import { useStateWithDispatch } from "../hooks/useStateWithDispatch";
 import { ReportInterface } from "../utils/types";
 import Report from "../components/Report";
 import IndividualExpenseDetails from "../components/IndividualExpenseDetails";
+import Layout from "../components/layout/Layout";
+import ErrorBoundary from "../components/layout/ErrorBoundary";
 
 export interface Person {
   name: string;
@@ -26,13 +28,17 @@ const CalculatorPage = () => {
   const report = useStateWithDispatch<ReportInterface | null>(null);
   const contextData = { data: data, report: report };
   return (
-    <div>
-      <calculatorContext.Provider value={contextData}>
-        <Expenses />
-        <IndividualExpenseDetails />
-        <Report />
-      </calculatorContext.Provider>
-    </div>
+    <Layout>
+      <div>
+        <calculatorContext.Provider value={contextData}>
+          <ErrorBoundary>
+            <Expenses />
+            <IndividualExpenseDetails />
+            <Report />
+          </ErrorBoundary>
+        </calculatorContext.Provider>
+      </div>
+    </Layout>
   );
 };
 

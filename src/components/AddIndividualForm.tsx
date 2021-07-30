@@ -63,12 +63,19 @@ const AddIndividualForm = ({
             onChange={amountChange}
           />
         </label>
-        <span>{amountWarning || nameWarning}</span>
-
-        {validateAmount(parseFloat(amount), name) ? (
-          <input type="submit" value="Add Person" disabled />
+        {validateAmount(amount, name) != null ? (
+          <>
+            <span>
+              {amountWarning}
+              {nameWarning}
+            </span>
+            <input type="submit" value="Add Person" disabled />
+          </>
         ) : (
-          <input type="submit" value="Add Person" />
+          <>
+            <span>{nameWarning}</span>
+            <input type="submit" value="Add Person" />
+          </>
         )}
       </form>{" "}
     </>

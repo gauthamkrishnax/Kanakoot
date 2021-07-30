@@ -1,10 +1,13 @@
 import * as React from "react";
+import Layout from "../components/layout/Layout";
 // markup
 const IndexPage = () => {
   return (
-    <div>
-      <h1>Coming Soon</h1>
-    </div>
+    <Layout>
+      <div>
+        <h1>Coming Soon</h1>
+      </div>
+    </Layout>
   );
 };
 

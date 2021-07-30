@@ -54,9 +54,7 @@ export default function findWhoOwes(data: Person[]): ReportInterface {
       }
     });
   });
-  // if (loaneeList.length != 0) {
-  //   throw new Error("Find Who Owes Who Algorithm not working Properly !");
-  // }
+  // throw new Error("Find Who Owes Who Algorithm not working Properly !");
 
   return { ...expenseData, whoOwesReport: report };
 }

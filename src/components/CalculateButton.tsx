@@ -9,9 +9,12 @@ const CalculateButton = () => {
   const { data, report } = useContext(calculatorContext);
 
   const handleMouseEvent = () => {
-    report.setStateFunction(createReport(data.stateData));
+    try {
+      report.setStateFunction(createReport(data.stateData));
+    } catch (err) {
+      console.error("Algorithm did not work ! try refreshing !");
+    }
   };
-
   return data.stateData == null || data.stateData.length < 2 ? (
     <>
       <button disabled>Calculate</button>{" "}
