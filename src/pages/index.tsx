@@ -3,11 +3,9 @@ import Layout from "../components/layout/Layout";
 // markup
 const IndexPage = () => {
   return (
-    <Layout>
-      <div>
-        <h1>Coming Soon</h1>
-      </div>
-    </Layout>
+    <main>
+      <h1>Coming Soon</h1>
+    </main>
   );
 };
 

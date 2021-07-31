@@ -1,0 +1,44 @@
+@import '../base/variables';
+@import '../base/typography';
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 4em;
+    background-color: $teritiary;
+    box-shadow: $shadow-medium;
+}
+
+.links-container {
+    width: 100%;
+
+    ul {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        color: $gray-light-primary;
+        @extend .h6;
+
+        :nth-child(n) {
+            margin-right: 4em;
+        }
+
+        :last-child {
+            margin-right: 0;
+
+            button {
+                color: $gray-dark-primary;
+                background: $primary $primary-to-secondary;
+                display: flex;
+                align-items: center;
+
+                span {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+}

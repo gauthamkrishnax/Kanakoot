@@ -1,24 +1,26 @@
 import * as React from "react";
-import LogoMark from "../other/LogoMark";
 import Button from "../other/Button";
 import { Link } from "gatsby";
 
-import behance from "../../assets/behance.svg";
-import instagram from "../../assets/instagram.svg";
-import linkedin from "../../assets/linkedin.svg";
-import mail from "../../assets/mail.svg";
-import twitter from "../../assets/twitter.svg";
+import LogoMark from "../../assets/LogoMark.svg";
+import BehanceLogo from "../../assets/behance.inline.svg";
+import InstagramLogo from "../../assets/instagram.inline.svg";
+import LinkedinLogo from "../../assets/linkedin.inline.svg";
+import MailLogo from "../../assets/mail.inline.svg";
+import TwitterLogo from "../../assets/twitter.inline.svg";
+
+import * as style from "../../styles/components/Footer.module.scss";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className={style.container}>
       <Link to="/">
-        <div>
-          <LogoMark /> <h4>Kanakoot</h4>
+        <div className="logo-mark">
+          <img src={LogoMark} alt="kanakoot-logo" /> <h4>Kanakoot</h4>
           <hr />
         </div>
       </Link>
-      <div>
+      <div className={style.linkContainer}>
         <nav>
           <ul>
             <li>Home</li>
@@ -32,25 +34,25 @@ const Footer = () => {
           </ul>
           <ul>
             <li>
-              <img src={linkedin} alt="Linkedin Logo" />
+              <LinkedinLogo />
             </li>
             <li>
-              <img src={instagram} alt="Instagram Logo" />
+              <InstagramLogo />
             </li>
             <li>
-              <img src={behance} alt="Behance Logo" />
+              <BehanceLogo />
             </li>
             <li>
-              <img src={twitter} alt="Twitter Logo" />
+              <TwitterLogo />
             </li>
             <li>
-              <img src={mail} alt="Mail Logo" />
+              <MailLogo />
             </li>
           </ul>
         </nav>
-        <div>
-          <Button type="secondary">Change to Dark Mode</Button>
-          <span>Copyright © 2021 Gautham Krishna S</span>
+        <div className={style.footerButton}>
+          <Button>Change to Dark Mode</Button>
+          <p>Copyright © 2021 Gautham Krishna S</p>
         </div>
       </div>
     </footer>

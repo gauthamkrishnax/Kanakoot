@@ -8,20 +8,24 @@ import { ReportInterface } from "../utils/types";
 const IndividualExpenseDetails = () => {
   const { data } = useContext(calculatorContext);
   return (
-    <ol>
+    <div>
       {data.stateData ? (
-        data.stateData.map((person, i) => (
-          <PersonListElement
-            name={person.name}
-            amount={person.amount}
-            key={i}
-          />
-        ))
+        <>
+          <ol>
+            {data.stateData.map((person, i) => (
+              <PersonListElement
+                name={person.name}
+                amount={person.amount}
+                key={i}
+              />
+            ))}
+          </ol>
+          <CalculateButton />
+        </>
       ) : (
         <span>No data Added ! </span>
       )}
-      <CalculateButton />
-    </ol>
+    </div>
   );
 };
 

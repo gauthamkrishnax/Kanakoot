@@ -1,0 +1,30 @@
+#gatsby-focus-wrapper {
+    position: relative;
+    min-height: 100vh;
+}
+
+main {
+    padding: 4em;
+}
+
+.logo-mark {
+    display: flex;
+    align-items: center;
+    color: $gray-light-primary;
+
+    img {
+        margin-right: 1em;
+    }
+}
+
+button {
+    @extend .h6;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: .5em 1.2em;
+}
+
+hr {
+    border: none;
+    width: 100%;
+}

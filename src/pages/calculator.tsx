@@ -28,17 +28,15 @@ const CalculatorPage = () => {
   const report = useStateWithDispatch<ReportInterface | null>(null);
   const contextData = { data: data, report: report };
   return (
-    <Layout>
-      <div>
-        <calculatorContext.Provider value={contextData}>
-          <ErrorBoundary>
-            <Expenses />
-            <IndividualExpenseDetails />
-            <Report />
-          </ErrorBoundary>
-        </calculatorContext.Provider>
-      </div>
-    </Layout>
+    <main>
+      <calculatorContext.Provider value={contextData}>
+        <ErrorBoundary>
+          <Expenses />
+          <IndividualExpenseDetails />
+          <Report />
+        </ErrorBoundary>
+      </calculatorContext.Provider>
+    </main>
   );
 };
 

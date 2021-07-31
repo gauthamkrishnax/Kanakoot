@@ -1,0 +1,29 @@
+// Colors
+$gray-light-primary : #FAFAFA;
+$gray-light-secondary : #DFDFDF;
+$primary : #15EDA5;
+$secondary: #15C9ED;
+$teritiary: #0B0F1F;
+$gray-dark-secondary: #545454;
+$gray-dark-primary: #231F20;
+
+// Gradients
+$primary-to-secondary: linear-gradient(95.75deg, #15EDA5 0%, #18CDEA 100%);
+$secondary-to-primary: linear-gradient(95.75deg, #18CDEA 0%, #15EDA5 100%);
+
+$primary-to-gray: linear-gradient(95.14deg, #15EDA5 0%, #DFDFDF 100%);
+$teritiary-to-gray: linear-gradient(95.45deg, #0B0F1F 0%, #545454 173.16%);
+
+// Drop Shadows
+
+$shadow-low : 0px 3px 4px rgba(0, 0, 0, 0.14),
+0px 3px 3px rgba(0, 0, 0, 0.12),
+0px 1px 8px rgba(0, 0, 0, 0.2);
+
+$shadow-medium :0px 4px 4px rgba(0, 0, 0, 0.25),
+0px 6px 10px rgba(0, 0, 0, 0.14),
+0px 1px 18px rgba(0, 0, 0, 0.12);
+
+$shadow-high :0px 12px 17px rgba(0, 0, 0, 0.14),
+0px 5px 22px rgba(0, 0, 0, 0.12),
+0px 7px 8px rgba(0, 0, 0, 0.2);
