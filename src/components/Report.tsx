@@ -2,7 +2,7 @@ import * as React from "react";
 import { useContext } from "react";
 import { calculatorContext } from "../pages/calculator";
 import CalculateButton from "./CalculateButton";
-import PieGraph from "./piegraph";
+import PieGraph from "./PieGraph";
 
 const Report = () => {
   const { data, report } = useContext(calculatorContext);
