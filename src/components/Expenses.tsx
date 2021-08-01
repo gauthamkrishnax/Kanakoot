@@ -1,14 +1,9 @@
 import * as React from "react";
 import { useContext } from "react";
 import { calculatorContext } from "../pages/calculator";
-import IndividualExpenseDetails from "./IndividualExpenseDetails";
 import AddIndividualForm from "./AddIndividualForm";
-import Report from "./Report";
 import useFormData from "../hooks/useFormData";
 import { validateName, validateAmount } from "../utils/formValidation";
-import { createReport } from "../utils/createReport";
-import { ReportInterface } from "../utils/types";
-import { useStateWithDispatch } from "../hooks/useStateWithDispatch";
 
 const Expenses = () => {
   const { data, report } = useContext(calculatorContext);

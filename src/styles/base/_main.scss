@@ -1,6 +1,7 @@
 #gatsby-focus-wrapper {
     position: relative;
     min-height: 100vh;
+    overflow-x: hidden;
 }
 
 main {
@@ -27,4 +28,13 @@ button {
 hr {
     border: none;
     width: 100%;
+}
+
+.calculator-bg-logo {
+    opacity: 10%;
+    position: absolute;
+    z-index: -1;
+    width: 100vh;
+    bottom: 0;
+    right: -200px;
 }

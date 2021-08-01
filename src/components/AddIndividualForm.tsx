@@ -4,6 +4,8 @@ import { validateName, validateAmount } from "../utils/formValidation";
 import { useRef, useEffect, useContext } from "react";
 import { calculatorContext, Person } from "../pages/calculator";
 
+import * as style from "../styles/components/Addindividualform.module.scss";
+
 export interface AddIndividualFormProp {
   formprop: {
     name: string;
@@ -40,8 +42,7 @@ const AddIndividualForm = ({
   }
 
   return (
-    <>
-      {" "}
+    <div className={style.container}>
       <h6>Add Individual Expenses :</h6>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">
@@ -77,8 +78,8 @@ const AddIndividualForm = ({
             <input type="submit" value="Add Person" />
           </>
         )}
-      </form>{" "}
-    </>
+      </form>
+    </div>
   );
 };
 

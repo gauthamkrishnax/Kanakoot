@@ -4,8 +4,9 @@ import { useStateWithDispatch } from "../hooks/useStateWithDispatch";
 import { ReportInterface } from "../utils/types";
 import Report from "../components/Report";
 import IndividualExpenseDetails from "../components/IndividualExpenseDetails";
-import Layout from "../components/layout/Layout";
 import ErrorBoundary from "../components/layout/ErrorBoundary";
+
+import LogoMark from "../assets/LogoMark.svg";
 
 export interface Person {
   name: string;
@@ -36,6 +37,11 @@ const CalculatorPage = () => {
           <Report />
         </ErrorBoundary>
       </calculatorContext.Provider>
+      <img
+        className="calculator-bg-logo"
+        src={LogoMark}
+        alt="kanakoot logo faded"
+      />
     </main>
   );
 };
