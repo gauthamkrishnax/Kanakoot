@@ -4,7 +4,13 @@ import Layout from "../components/layout/Layout";
 const IndexPage = () => {
   return (
     <main>
-      <h1>Coming Soon</h1>
+      <h1>
+        Share your<br></br> expense with ease
+      </h1>
+      <h5>
+        Kanakoot calculates expense per person to balance money spent among
+        groups. Get Directions to solve the who owes whom problem.
+      </h5>
     </main>
   );
 };

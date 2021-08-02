@@ -5,18 +5,21 @@
     padding: 2em;
     border-radius: 8px;
 
+
     h6 {
         margin-bottom: 1em;
     }
 
     form {
         width: 100%;
+        margin: 0 auto;
 
         div:first-child {
             display: flex;
 
             label:last-child {
-                width: 65%;
+                max-width: 250px;
+                min-width: 100px;
                 margin-left: 1em;
             }
         }

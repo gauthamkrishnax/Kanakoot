@@ -1,0 +1,75 @@
+@import '../base/variables';
+
+.common {
+    border-radius: 8px;
+    background: $primary $primary-to-gray;
+    padding: 2em;
+}
+
+.container {
+    @extend .common;
+    padding-bottom: 4em;
+
+    h4 {
+        margin: 2em 0 .6em 0;
+    }
+}
+
+.calculateButton {
+    @extend .common;
+}
+
+.logo {
+    margin: -2em -2em 0;
+    border-bottom: 1px solid $gray-dark-secondary;
+    padding: 2em;
+
+    h4 {
+        margin: 0 0 0 4px;
+        display: inline;
+        color: $gray-dark-secondary;
+    }
+}
+
+.heading {
+    margin: 2em 2em;
+
+    h3 {
+        margin-bottom: 10px;
+    }
+
+    h5 {
+        margin-left: 10px;
+    }
+}
+
+.graph {
+    width: 60%;
+    margin: 2em 0;
+    background-color: $gray-light-primary;
+    border-radius: 8px;
+    box-shadow: $shadow-medium;
+    padding: 2em;
+}
+
+.directions {
+    background-color: $gray-light-primary;
+    padding: .5em;
+    border-radius: 8px;
+    box-shadow: $shadow-medium;
+
+    ul {
+        margin-left: 2em;
+    }
+
+    li {
+        margin: 1em 0;
+        list-style-type: circle;
+        color: $gray-dark-secondary;
+
+        strong {
+            color: $gray-dark-primary;
+            font-weight: 700;
+        }
+    }
+}

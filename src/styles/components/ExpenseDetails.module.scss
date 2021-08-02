@@ -11,15 +11,25 @@
     width: 100%;
     text-align: left;
 
+    button {
+        font-size: inherit;
+        background-color: transparent;
+        color: #762429;
+    }
+
     tr:first-child {
         &:hover {
-            background-color: $gray-light-primary;
+            background-color: transparent;
         }
     }
 
+    td:nth-child(2) {
+        text-transform: capitalize;
+    }
+
     tr {
-        border-bottom: 1px solid $gray-dark-secondary;
-        color: $gray-dark-secondary;
+        border-bottom: 2px solid $gray-dark-secondary;
+        color: $gray-dark-primary;
 
         &:hover {
             background-color: $gray-light-secondary;
@@ -29,11 +39,11 @@
     th {
         @extend .h6;
         color: $gray-dark-primary;
-        padding-bottom: 1em;
+        padding: 1em .5em;
     }
 
     td {
-        padding: 1em 0;
+        padding: 1em .5em;
         word-break: break-all;
     }
 

@@ -1,4 +1,10 @@
+html,
+body {
+    background-color: $teritiary;
+}
+
 #gatsby-focus-wrapper {
+    background-color: $gray-light-primary;
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;

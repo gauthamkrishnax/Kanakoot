@@ -31,12 +31,16 @@ const CalculatorPage = () => {
   const report = useStateWithDispatch<ReportInterface | null>(null);
   const contextData = { data: data, report: report };
   return (
-    <main className={style.container}>
+    <main>
       <calculatorContext.Provider value={contextData}>
         <ErrorBoundary>
-          <Expenses />
-          <Report />
-          <IndividualExpenseDetails />
+          <div className={style.container}>
+            <div className={style.expenseFromAndDetails}>
+              <Expenses />
+              <IndividualExpenseDetails />
+            </div>
+            <Report />
+          </div>
         </ErrorBoundary>
       </calculatorContext.Provider>
       <div className="calculator-bg-logo">

@@ -17,7 +17,7 @@ export default function addPersonToContextData(
   let sameName = false;
   if (data.stateData) {
     data.stateData.forEach((e) => {
-      if (e.name === name) {
+      if (e.name.toLowerCase() === name.toLowerCase()) {
         e.amount += parseFloat(amount);
         sameName = true;
       }
@@ -35,8 +35,6 @@ export default function addPersonToContextData(
       },
     ];
   }
-  console.log(2);
-
   data.setStateFunction([...data.stateData]);
   setName("");
   setAmount("");
