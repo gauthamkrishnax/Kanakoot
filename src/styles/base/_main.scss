@@ -1,7 +1,9 @@
 #gatsby-focus-wrapper {
-    position: relative;
     min-height: 100vh;
+    position: relative;
     overflow-x: hidden;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 main {
@@ -18,11 +20,18 @@ main {
     }
 }
 
-button {
+button,
+input[type=submit] {
+    border: none;
     @extend .h6;
     cursor: pointer;
     border-radius: 8px;
     padding: .5em 1.2em;
+}
+
+button:disabled,
+input[type=submit]:disabled {
+    cursor: not-allowed;
 }
 
 hr {
@@ -37,4 +46,8 @@ hr {
     width: 100vh;
     bottom: 0;
     right: -200px;
+
+    img {
+        width: 100%;
+    }
 }

@@ -1,0 +1,45 @@
+@import '../base/variables';
+@import '../base/typography';
+
+.container {
+    border: 3px dashed $gray-dark-secondary;
+    border-radius: 8px;
+    padding: 2em;
+}
+
+.table {
+    width: 100%;
+    text-align: left;
+
+    tr:first-child {
+        &:hover {
+            background-color: $gray-light-primary;
+        }
+    }
+
+    tr {
+        border-bottom: 1px solid $gray-dark-secondary;
+        color: $gray-dark-secondary;
+
+        &:hover {
+            background-color: $gray-light-secondary;
+        }
+    }
+
+    th {
+        @extend .h6;
+        color: $gray-dark-primary;
+        padding-bottom: 1em;
+    }
+
+    td {
+        padding: 1em 0;
+        word-break: break-all;
+    }
+
+    svg {
+        margin-bottom: -4px;
+        margin-left: 4px;
+    }
+
+}

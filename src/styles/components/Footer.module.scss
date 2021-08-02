@@ -2,12 +2,17 @@
 
 .container {
     width: 100%;
-    position: absolute;
+    // position: sticky;
     bottom: 0;
     left: 0;
     padding: 4em 4em 6em 4em;
     color: $gray-light-primary;
     background-color: $teritiary;
+
+    div:first-child {
+        display: flex;
+        align-items: center;
+    }
 
     hr {
         margin-left: 1em;
@@ -18,14 +23,14 @@
 .link-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     color: $gray-light-secondary;
 
     nav {
         margin-top: 2em;
 
-        :first-child {
-            margin-bottom: 1em;
+        ul:first-child {
+            margin-bottom: 2em;
         }
 
         :nth-child(n) {
@@ -39,6 +44,7 @@
                 margin-right: 0;
             }
         }
+
     }
 }
 
@@ -46,6 +52,9 @@
     text-align: right;
 
     button {
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 0.5px;
         background-color: $gray-light-secondary;
         color: $gray-dark-primary;
         margin-bottom: .4em;

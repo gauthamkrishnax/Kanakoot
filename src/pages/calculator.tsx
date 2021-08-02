@@ -8,6 +8,8 @@ import ErrorBoundary from "../components/layout/ErrorBoundary";
 
 import LogoMark from "../assets/LogoMark.svg";
 
+import * as style from "../styles/components/calculator.module.scss";
+
 export interface Person {
   name: string;
   amount: number;
@@ -29,19 +31,17 @@ const CalculatorPage = () => {
   const report = useStateWithDispatch<ReportInterface | null>(null);
   const contextData = { data: data, report: report };
   return (
-    <main>
+    <main className={style.container}>
       <calculatorContext.Provider value={contextData}>
         <ErrorBoundary>
           <Expenses />
-          <IndividualExpenseDetails />
           <Report />
+          <IndividualExpenseDetails />
         </ErrorBoundary>
       </calculatorContext.Provider>
-      <img
-        className="calculator-bg-logo"
-        src={LogoMark}
-        alt="kanakoot logo faded"
-      />
+      <div className="calculator-bg-logo">
+        <img src={LogoMark} alt="kanakoot logo faded" />
+      </div>
     </main>
   );
 };

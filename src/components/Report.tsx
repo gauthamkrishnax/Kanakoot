@@ -11,7 +11,7 @@ const Report = () => {
   }, [`${data.stateData}`]);
   if (report.stateData)
     return (
-      <div>
+      <div className="report">
         <h4>Kanakoot</h4>
         <h3>
           TotalExpense: {Math.round(report.stateData.totalExpense * 100) / 100}

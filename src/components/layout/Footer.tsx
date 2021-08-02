@@ -14,12 +14,13 @@ import * as style from "../../styles/components/Footer.module.scss";
 const Footer = () => {
   return (
     <footer className={style.container}>
-      <Link to="/">
-        <div className="logo-mark">
+      <div>
+        <Link className="logo-mark" to="/">
           <img src={LogoMark} alt="kanakoot-logo" /> <h4>Kanakoot</h4>
-          <hr />
-        </div>
-      </Link>
+        </Link>
+        <hr />
+      </div>
+
       <div className={style.linkContainer}>
         <nav>
           <ul>

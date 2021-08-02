@@ -1,0 +1,8 @@
+@import '../base/variables';
+
+.container {
+    background-color: $gray-light-primary;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 2em 2em;
+}

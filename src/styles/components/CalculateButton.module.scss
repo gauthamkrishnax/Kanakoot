@@ -1,0 +1,27 @@
+@import '../base/variables';
+
+.disabled {
+    // display: flex;
+    margin-top: 2em;
+    text-align: center;
+
+    p {
+        color: #762429;
+        margin-top: 8px;
+    }
+}
+
+.active {
+    display: flex;
+    margin-top: 2em;
+    justify-content: center;
+
+    button {
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        background-color: $teritiary;
+        color: $gray-light-primary;
+        border-radius: 4px;
+    }
+}

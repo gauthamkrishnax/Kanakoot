@@ -2,4 +2,65 @@
 
 .container {
     background: $primary $primary-to-gray;
+    padding: 2em;
+    border-radius: 8px;
+
+    h6 {
+        margin-bottom: 1em;
+    }
+
+    form {
+        width: 100%;
+
+        div:first-child {
+            display: flex;
+
+            label:last-child {
+                width: 65%;
+                margin-left: 1em;
+            }
+        }
+
+        label {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            color: $gray-dark-primary;
+
+            input {
+                margin-top: 10px;
+                font-size: 1.3rem;
+                font-weight: 700;
+                letter-spacing: 0.15px;
+                box-shadow: $shadow-low;
+                border-radius: 8px;
+                padding: 5px 5px;
+                border: none;
+                outline-offset: 2px;
+                outline-color: $secondary;
+            }
+        }
+    }
+}
+
+.submit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+
+    span {
+        color: #762429;
+    }
+
+    input[type=submit] {
+        font-size: 1rem;
+        color: $gray-light-primary;
+        background-color: $teritiary;
+
+        &:disabled {
+            background-color: $gray-light-primary;
+            color: $gray-light-secondary;
+        }
+    }
 }

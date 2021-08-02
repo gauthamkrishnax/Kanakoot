@@ -1,11 +1,17 @@
 import * as React from "react";
 
-const PersonListElement = ({ name, amount }) => {
+import Trash from "../assets/trash.inline.svg";
+
+const PersonListElement = ({ name, amount, no }) => {
   return (
-    <li>
-      <span>{name} </span>
-      <span>{amount}</span>
-    </li>
+    <tr>
+      <td>{no + 1}.</td>
+      <td>{name} </td>
+      <td>{amount}</td>
+      <td>
+        Delete <Trash />
+      </td>
+    </tr>
   );
 };
 

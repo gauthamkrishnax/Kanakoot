@@ -42,41 +42,48 @@ const AddIndividualForm = ({
   }
 
   return (
-    <div className={style.container}>
+    <div className={`${style.container} expenseForm`}>
       <h6>Add Individual Expenses :</h6>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">
-          Name
-          <input
-            type="text"
-            name="name"
-            value={name}
-            onChange={nameChange}
-            ref={nameRef}
-          />
-        </label>
-        <label htmlFor="amount">
-          Amount
-          <input
-            type="text"
-            name="amount"
-            value={amount}
-            onChange={amountChange}
-          />
-        </label>
+        <div>
+          <label htmlFor="name">
+            Name
+            <input
+              type="text"
+              name="name"
+              value={name}
+              onChange={nameChange}
+              ref={nameRef}
+            />
+          </label>
+          <label htmlFor="amount">
+            Amount
+            <input
+              type="text"
+              name="amount"
+              value={amount}
+              onChange={amountChange}
+            />
+          </label>
+        </div>
         {validateAmount(amount, name) != null ? (
-          <>
+          <div className={style.submit}>
             <span>
               {amountWarning}
               {nameWarning}
             </span>
-            <input type="submit" value="Add Person" disabled />
-          </>
+            <input
+              type="submit"
+              value="Add Person"
+              title="Add data to the form"
+              disabled
+            />
+          </div>
         ) : (
-          <>
+          <div className={style.submit}>
             <span>{nameWarning}</span>
             <input type="submit" value="Add Person" />
-          </>
+          </div>
         )}
       </form>
     </div>
