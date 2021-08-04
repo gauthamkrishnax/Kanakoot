@@ -6,7 +6,7 @@ import Layout from "../components/layout/Layout";
 const NotFoundPage = () => {
   return (
     <main>
-      <h1>Under Development...</h1>
+      <h3>Error 404 : May be Under Development</h3>
     </main>
   );
 };

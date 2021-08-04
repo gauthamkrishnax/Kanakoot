@@ -45,6 +45,10 @@
     td {
         padding: 1em .5em;
         word-break: break-all;
+
+        @include medium {
+            font-size: .7rem;
+        }
     }
 
     @include medium {

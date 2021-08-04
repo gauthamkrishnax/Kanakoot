@@ -7,6 +7,7 @@
     z-index: 0;
     top: -10em;
     right: -10em;
+    animation: fadeIn 1s ease-in-out;
 
     @include medium {
         display: none;
@@ -14,6 +15,7 @@
 }
 
 .sectionOne {
+    animation: fadeIn 1s ease-in-out;
     margin-left: 2em;
     margin-top: -8em;
 
@@ -43,6 +45,12 @@
                 margin: 1em;
             }
 
+            &:hover {
+                transition: all .05s ease-in-out;
+                opacity: 80%;
+                box-shadow: $shadow-low;
+            }
+
         }
 
 
@@ -56,6 +64,10 @@
 
             button {
                 background: $primary-to-secondary;
+
+                &:hover {
+                    background: $secondary-to-primary;
+                }
             }
         }
     }

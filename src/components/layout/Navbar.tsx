@@ -22,8 +22,23 @@ const Navbar = () => {
           <li>
             <Link to="/404">About</Link>
           </li>
-          <li>Contact</li>
-          <li>Contribute</li>
+          <li>
+            <a
+              href="https://github.com/gauthamkrishnax/Kanakoot/issues"
+              rel="noopener"
+            >
+              Contact
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.buymeacoffee.com/gauthamkrishna"
+              rel="noopener"
+            >
+              {" "}
+              Contribute
+            </a>
+          </li>
           <li>
             <Link to="/calculator" activeClassName="disabled">
               <Button>

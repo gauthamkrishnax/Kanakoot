@@ -42,6 +42,12 @@
         li:nth-child(n) {
             margin-right: 4em;
 
+            &:hover {
+                transition: all .1s ease-in-out;
+                opacity: 70%;
+            }
+
+
             @include medium {
                 margin: 1em;
             }

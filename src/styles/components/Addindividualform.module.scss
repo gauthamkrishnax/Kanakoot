@@ -80,6 +80,12 @@
         color: $gray-light-primary;
         background-color: $teritiary;
 
+        &:hover {
+            transition: all .05s ease-in-out;
+            opacity: 80%;
+            box-shadow: $shadow-low;
+        }
+
         &:disabled {
             background-color: $gray-light-primary;
             color: $gray-light-secondary;
