@@ -1,0 +1,73 @@
+@import '../base/variables';
+
+.illu {
+    height: 100%;
+    z-index: -10;
+    position: absolute;
+    z-index: 0;
+    top: -10em;
+    right: -10em;
+
+    @include medium {
+        display: none;
+    }
+}
+
+.sectionOne {
+    margin-left: 2em;
+    margin-top: -8em;
+
+    @include medium {
+        margin-left: 0;
+        margin-top: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    h5 {
+        margin-top: 1em;
+        max-width: 750px;
+
+        @include medium {
+            margin: 1em auto;
+        }
+    }
+
+    div {
+        margin-top: 2em;
+
+        button {
+            cursor: pointer;
+
+            @include medium {
+                margin: 1em;
+            }
+
+        }
+
+
+
+        a:first-child {
+            margin-right: 2em;
+
+            @include medium {
+                margin-right: 0;
+            }
+
+            button {
+                background: $primary-to-secondary;
+            }
+        }
+    }
+}
+
+.sectionOneContainer {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+
+    @include medium {
+        width: 100%;
+        min-height: 50vh;
+    }
+}

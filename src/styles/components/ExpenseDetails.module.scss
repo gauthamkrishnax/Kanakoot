@@ -47,6 +47,14 @@
         word-break: break-all;
     }
 
+    @include medium {
+
+        td:first-child,
+        th:first-child {
+            display: none;
+        }
+    }
+
     svg {
         margin-bottom: -4px;
         margin-left: 4px;

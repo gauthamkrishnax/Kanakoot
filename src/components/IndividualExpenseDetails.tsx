@@ -4,7 +4,7 @@ import { calculatorContext } from "../pages/calculator";
 import CalculateButton from "./CalculateButton";
 import PersonListElement from "./PersonListElement";
 import { ReportInterface } from "../utils/types";
-import deletePersonFromContextData from "../utils/DeletePersonFromContextData";
+import deletePersonFromContextData from "../utils/deletePersonFromContextData";
 
 import * as style from "../styles/components/ExpenseDetails.module.scss";
 

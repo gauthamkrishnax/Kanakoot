@@ -8,6 +8,8 @@
     padding: 4em 4em 6em 4em;
     color: $gray-light-primary;
     background-color: $teritiary;
+    position: static;
+    z-index: 1;
 
     div:first-child {
         display: flex;
@@ -26,11 +28,20 @@
     align-items: flex-end;
     color: $gray-light-secondary;
 
+    @include medium {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
     nav {
         margin-top: 2em;
 
+
         ul:first-child {
             margin-bottom: 2em;
+            flex-wrap: wrap;
+            margin-top: 2em;
         }
 
         :nth-child(n) {
@@ -38,6 +49,10 @@
 
             :nth-child(n) {
                 margin-right: 2em;
+
+                @include medium {
+                    margin-right: 0.5em;
+                }
             }
 
             :last-child {
@@ -50,6 +65,11 @@
 
 .footer-button {
     text-align: right;
+
+    @include medium {
+        margin-top: 2em;
+        text-align: left;
+    }
 
     button {
         font-size: 1rem;

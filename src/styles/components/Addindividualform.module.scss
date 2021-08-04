@@ -17,10 +17,19 @@
         div:first-child {
             display: flex;
 
+            @include medium {
+                flex-direction: column;
+                max-width: 500px;
+            }
+
             label:last-child {
                 max-width: 250px;
                 min-width: 100px;
                 margin-left: 1em;
+
+                @include medium {
+                    margin: 1em 0;
+                }
             }
         }
 
@@ -52,8 +61,18 @@
     align-items: center;
     margin-top: 1em;
 
+    @include medium {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
     span {
         color: #762429;
+
+        @include medium {
+            margin-bottom: 1em;
+        }
     }
 
     input[type=submit] {

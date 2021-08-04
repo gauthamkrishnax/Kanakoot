@@ -5,13 +5,28 @@
     grid-template-columns: 50% 50%;
     max-width: 1600px;
     margin: 0 auto;
+
+    @include medium {
+        grid-template-columns: 100%;
+    }
 }
 
 .expenseFromAndDetails {
     min-width: 50%;
     margin-right: 2em;
 
+    @include medium {
+        width: 100%;
+        margin: 0;
+    }
+
     div:first-child {
         margin-bottom: 2em;
+    }
+
+    @include medium {
+        div:last-child {
+            margin-bottom: 2em;
+        }
     }
 }

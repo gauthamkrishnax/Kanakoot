@@ -8,10 +8,22 @@
     padding: 1em 4em;
     background-color: $teritiary;
     box-shadow: $shadow-medium;
+    position: static;
+    z-index: 1;
+
+    @include medium {
+        width: 100%;
+        padding: 2em 1em;
+        flex-direction: column;
+    }
 }
 
 .links-container {
     width: 100%;
+
+    @include medium {
+        margin-top: 2em;
+    }
 
     ul {
         width: 100%;
@@ -21,8 +33,18 @@
         color: $gray-light-primary;
         @extend .h6;
 
-        :nth-child(n) {
+        @include medium {
+            width: auto;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        li:nth-child(n) {
             margin-right: 4em;
+
+            @include medium {
+                margin: 1em;
+            }
         }
 
         :last-child {
