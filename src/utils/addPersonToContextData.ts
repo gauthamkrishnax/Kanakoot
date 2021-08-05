@@ -1,4 +1,3 @@
-import { validateAmount, validateName } from "./formValidation";
 import { Person } from "../pages/calculator";
 
 export default function addPersonToContextData(

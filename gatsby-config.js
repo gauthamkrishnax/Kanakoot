@@ -6,6 +6,7 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-webpack-bundle-analyser-v2",
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
@@ -27,6 +28,12 @@ module.exports = {
             file: "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;1,400&display=swap",
           },
         ],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["G-GKBJGBGQMJ"],
       },
     },
   ],

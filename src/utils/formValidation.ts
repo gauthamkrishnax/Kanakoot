@@ -1,5 +1,4 @@
 import { Person } from "../pages/calculator";
-import { ReportInterface } from "./types";
 
 export function validateName(name: string, data: Person[]): string | null {
   let warning: string | null = null;

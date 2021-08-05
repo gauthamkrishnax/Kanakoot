@@ -1,6 +1,7 @@
-import { person, personOweDetails } from "./types";
+import { Person } from "../pages/calculator";
+import { PersonOweDetails } from "./types";
 
-export const data1: person[] = [
+export const data1: Person[] = [
   {
     name: "jaison",
     amount: 200,
@@ -18,7 +19,7 @@ export const data1: person[] = [
     amount: 400,
   },
 ];
-export const data2: person[] = [
+export const data2: Person[] = [
   {
     name: "A",
     amount: 300,
@@ -40,7 +41,7 @@ export const data2: person[] = [
     amount: 100,
   },
 ];
-export const data3: person[] = [
+export const data3: Person[] = [
   {
     name: "A",
     amount: 100,
@@ -63,7 +64,7 @@ export const data3: person[] = [
   },
 ];
 
-export const result1: personOweDetails[] = [
+export const result1: PersonOweDetails[] = [
   {
     name: "jaison",
     amount: 200,
@@ -91,7 +92,7 @@ export const result1: personOweDetails[] = [
   },
 ];
 
-export const result2: personOweDetails[] = [
+export const result2: PersonOweDetails[] = [
   {
     name: "B",
     amount: 150,
@@ -126,7 +127,7 @@ export const result2: personOweDetails[] = [
   },
 ];
 
-export const result3: personOweDetails[] = [
+export const result3: PersonOweDetails[] = [
   {
     name: "A",
     amount: 100,

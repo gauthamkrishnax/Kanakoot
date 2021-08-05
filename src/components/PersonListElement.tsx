@@ -1,5 +1,4 @@
 import * as React from "react";
-import deletePersonFromContextData from "../utils/DeletePersonFromContextData";
 import { calculatorContext } from "../pages/calculator";
 
 import Trash from "../assets/trash.inline.svg";

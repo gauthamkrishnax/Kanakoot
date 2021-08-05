@@ -1,8 +1,8 @@
 import * as React from "react";
 import addPersonToContextData from "../utils/addPersonToContextData";
-import { validateName, validateAmount } from "../utils/formValidation";
+import { validateAmount } from "../utils/formValidation";
 import { useRef, useEffect, useContext } from "react";
-import { calculatorContext, Person } from "../pages/calculator";
+import { calculatorContext } from "../pages/calculator";
 
 import * as style from "../styles/components/Addindividualform.module.scss";
 

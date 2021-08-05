@@ -1,8 +1,6 @@
 import * as React from "react";
-import { Person } from "../pages/calculator";
 import { calculatorContext } from "../pages/calculator";
 import { useContext } from "react";
-import { ReportInterface } from "../utils/types";
 import { createReport } from "../utils/createReport";
 
 import * as style from "../styles/components/CalculateButton.module.scss";

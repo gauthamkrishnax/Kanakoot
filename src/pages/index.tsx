@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import Layout from "../components/layout/Layout";
 import * as style from "../styles/components/index.module.scss";
 import heroImg from "../assets/hero.svg";
 
