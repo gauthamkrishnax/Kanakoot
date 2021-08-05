@@ -20,7 +20,12 @@ const Navbar = () => {
       <nav className={style.linksContainer}>
         <ul>
           <li>
-            <Link to="/about">About</Link>
+            <a
+              href="https://github.com/gauthamkrishnax/Kanakoot#readme"
+              rel="noreferer"
+            >
+              About
+            </a>
           </li>
           <li>
             <a

@@ -24,7 +24,7 @@ const IndexPage = () => {
                 <button>Calculate Expense</button>
               </Link>
               <a
-                href="https://github.com/gauthamkrishnax/Kanakoot"
+                href="https://github.com/gauthamkrishnax/Kanakoot#readme"
                 rel="noopener"
                 aria-label="Learn more about Kanakoot by visiting the github repo"
               >

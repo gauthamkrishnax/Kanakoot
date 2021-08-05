@@ -31,7 +31,9 @@ const Footer = () => {
               <Link to="/calculator">Calculator</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <a href="https://github.com/gauthamkrishnax/Kanakoot#readme">
+                About
+              </a>
             </li>
             <li>
               <a
