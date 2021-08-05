@@ -1,19 +1,6 @@
 @import '../base/variables';
 @import '../base/typography';
 
-.illu {
-    height: 110vh;
-    z-index: -10;
-    position: absolute;
-    z-index: 0;
-    top: 2em;
-    right: 0;
-    animation: fadeIn .4s ease-in;
-
-    @include medium {
-        display: none;
-    }
-}
 
 .sectionOne {
     animation: fadeIn 1s ease-in-out;

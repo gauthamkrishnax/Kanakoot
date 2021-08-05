@@ -62,3 +62,22 @@ hr {
         width: 100%;
     }
 }
+
+.shapesIllu {
+    top: 0;
+    right: 0;
+    width: auto;
+    height: 115vh;
+    z-index: -10;
+    position: absolute;
+    animation: moveLeft 1s ease-in;
+
+    @include medium {
+        height: auto;
+        width: 120vw;
+        top: -20em;
+        right: -5em;
+        transform: rotateZ(270deg);
+        animation: none;
+    }
+}
