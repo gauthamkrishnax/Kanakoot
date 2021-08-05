@@ -27,13 +27,16 @@ module.exports = {
             name: "Lato",
             file: "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;1,400&display=swap",
           },
+          {
+            resolve: "gatsby-plugin-google-tagmanager",
+            options: {
+              id: "G-GKBJGBGQMJ",
+              includeInDevelopment: false,
+              defaultDataLayer: { platform: "gatsby" },
+              enableWebVitalsTracking: true,
+            },
+          },
         ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: ["G-GKBJGBGQMJ"],
       },
     },
   ],
