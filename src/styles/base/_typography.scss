@@ -1,9 +1,16 @@
 html,
 body {
-    font-family: Lato, Arial, Helvetica, sans-serif;
     font-size: 1rem;
     font-weight: 400;
     letter-spacing: 0.5px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', Roboto, Arial, Helvetica, sans-serif;
+}
+
+.wf-Lato--loaded {
+    font-family: Lato,
+        Arial,
+        Helvetica,
+        sans-serif;
 }
 
 h1 {
@@ -30,7 +37,8 @@ h4 {
     letter-spacing: 0.5px;
 }
 
-h5 {
+h5,
+.h5 {
     font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: 0px;

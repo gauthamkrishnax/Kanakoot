@@ -16,11 +16,17 @@ module.exports = {
     },
 
     {
-      resolve: "gatsby-plugin-web-font-loader",
+      resolve: "gatsby-omni-font-loader",
       options: {
-        google: {
-          families: ["Lato:300,400,700"],
-        },
+        mode: "async",
+        enableListener: true,
+        preconnect: ["https://fonts.gstatic.com"],
+        web: [
+          {
+            name: "Lato",
+            file: "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;1,400&display=swap",
+          },
+        ],
       },
     },
   ],

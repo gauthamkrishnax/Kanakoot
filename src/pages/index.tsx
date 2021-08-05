@@ -15,17 +15,21 @@ const IndexPage = () => {
           <h1>
             Share your<br></br> expense with ease
           </h1>
-          <h5>
+          <p>
             Kanakoot calculates expense per person to balance money spent among
             groups. Get Directions to solve the who owes whom problem.
-          </h5>
+          </p>
           <div>
             <Link to="/calculator">
               <button>Calculate Expense</button>
             </Link>
-            <Link to="/about">
+            <a
+              href="https://github.com/gauthamkrishnax/Kanakoot"
+              rel="noopener"
+              aria-label="Learn more about Kanakoot by visiting the github repo"
+            >
               <button>Learn More</button>
-            </Link>
+            </a>
           </div>
         </div>
         <img
