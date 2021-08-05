@@ -6,7 +6,6 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-webpack-bundle-analyser-v2",
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
@@ -27,16 +26,14 @@ module.exports = {
             name: "Lato",
             file: "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;1,400&display=swap",
           },
-          {
-            resolve: "gatsby-plugin-google-tagmanager",
-            options: {
-              id: "GTM-W9NT37R",
-              includeInDevelopment: false,
-              defaultDataLayer: { platform: "gatsby" },
-              enableWebVitalsTracking: true,
-            },
-          },
         ],
+      },
+    },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-PF3LVF3",
+        includeInDevelopment: false,
       },
     },
   ],
