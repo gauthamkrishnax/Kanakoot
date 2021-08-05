@@ -49,12 +49,22 @@ $shadow-high :0px 12px 17px rgba(0, 0, 0, 0.14),
 
 @keyframes moveLeft {
     from {
-        transform: translatex(4em);
+        transform: translatex(2em);
         opacity: 0;
     }
 
     to {
         transform: none;
         opacity: 100%;
+    }
+}
+
+@keyframes moveDown {
+    from {
+        transform: translatey(-2em);
+    }
+
+    to {
+        transform: none;
     }
 }

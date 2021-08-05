@@ -17,6 +17,10 @@ h1 {
     font-size: 5.8rem;
     font-weight: 300;
     letter-spacing: -1.5px;
+
+    @include medium {
+        font-size: 4.2rem;
+    }
 }
 
 h2 {

@@ -20,12 +20,12 @@ const Navbar = () => {
       <nav className={style.linksContainer}>
         <ul>
           <li>
-            <Link to="/404">About</Link>
+            <Link to="/about">About</Link>
           </li>
           <li>
             <a
               href="https://github.com/gauthamkrishnax/Kanakoot/issues"
-              rel="noopener"
+              rel="noreferer"
             >
               Contact
             </a>
@@ -33,7 +33,7 @@ const Navbar = () => {
           <li>
             <a
               href="https://www.buymeacoffee.com/gauthamkrishna"
-              rel="noopener"
+              rel="noreferer"
             >
               {" "}
               Contribute

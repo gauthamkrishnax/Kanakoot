@@ -10,6 +10,7 @@
     box-shadow: $shadow-medium;
     position: static;
     z-index: 1;
+    animation: moveDown .5s ease-in;
 
     @include medium {
         width: 100%;
@@ -22,7 +23,7 @@
     width: 100%;
 
     @include medium {
-        margin-top: 2em;
+        margin-top: 1em;
     }
 
     ul {

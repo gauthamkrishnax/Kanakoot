@@ -24,35 +24,74 @@ const Footer = () => {
       <div className={style.linkContainer}>
         <nav>
           <ul>
-            <li>Home</li>
-            <li>Calculator</li>
-            <li>About</li>
-            <li>Contribute</li>
-            <li>Github</li>
-            <li>Issues</li>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/calculator">Calculator</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <a
+                href="https://www.buymeacoffee.com/gauthamkrishna"
+                rel="noreferer"
+              >
+                Contribute
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/gauthamkrishnax/Kanakoot"
+                rel="noreferer"
+              >
+                Github
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/gauthamkrishnax/Kanakoot/issues"
+                rel="noreferer"
+              >
+                Issues
+              </a>
+            </li>
             <li>Privacy Policy</li>
             <li>Terms of Service</li>
           </ul>
           <ul>
             <li>
-              <LinkedinLogo />
+              <a
+                href="https://www.linkedin.com/in/gauthamkrishnas/"
+                rel="noreferer"
+              >
+                <LinkedinLogo />
+              </a>
             </li>
             <li>
-              <InstagramLogo />
+              <a href="https://www.instagram.com/aestheticvisu4ls/">
+                <InstagramLogo />
+              </a>
             </li>
             <li>
-              <BehanceLogo />
+              <a href="https://www.behance.net/gauthamkrishnax" rel="noreferer">
+                <BehanceLogo />
+              </a>
             </li>
             <li>
-              <TwitterLogo />
+              <a href="https://twitter.com/8thumbi" rel="noreferer">
+                <TwitterLogo />
+              </a>
             </li>
             <li>
-              <MailLogo />
+              <a href="mailto:gauthamkrishnax@gmail.com">
+                <MailLogo />
+              </a>
             </li>
           </ul>
         </nav>
         <div className={style.footerButton}>
-          <Button>Change to Dark Mode</Button>
           <p>Copyright © 2021 Gautham Krishna S</p>
         </div>
       </div>

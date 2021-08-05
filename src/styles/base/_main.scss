@@ -70,7 +70,7 @@ hr {
     height: 115vh;
     z-index: -10;
     position: absolute;
-    animation: moveLeft 1s ease-in;
+    animation: moveLeft .7s ease-in;
 
     @include medium {
         height: auto;
@@ -78,6 +78,7 @@ hr {
         top: -20em;
         right: -5em;
         transform: rotateZ(270deg);
-        animation: none;
+        animation: moveDown .7s ease-in;
+
     }
 }

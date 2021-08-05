@@ -50,8 +50,13 @@
             :nth-child(n) {
                 margin-right: 2em;
 
+                &:hover {
+                    opacity: 70%;
+                }
+
                 @include medium {
-                    margin-right: 0.5em;
+                    margin-right: 1em;
+                    margin-top: 1em;
                 }
             }
 
@@ -69,14 +74,5 @@
     @include medium {
         margin-top: 2em;
         text-align: left;
-    }
-
-    button {
-        font-size: 1rem;
-        font-weight: 400;
-        letter-spacing: 0.5px;
-        background-color: $gray-light-secondary;
-        color: $gray-dark-primary;
-        margin-bottom: .4em;
     }
 }
