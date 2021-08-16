@@ -63,7 +63,7 @@ Gatsby and typescript + sass for styling. Hosted on Netlify.
     Navigate into your new site’s directory and start it up.
 
     ```shell
-    cd my-gatsby-site/
+    cd Kanakoot/
     npm run develop
     ```
 
