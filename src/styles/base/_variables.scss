@@ -68,3 +68,15 @@ $shadow-high :0px 12px 17px rgba(0, 0, 0, 0.14),
         transform: none;
     }
 }
+
+@keyframes illuMoveDown {
+    from {
+        transform: translatey(-2em);
+        transform: rotateZ(270deg);
+    }
+
+    to {
+        transform: none;
+        transform: rotateZ(270deg);
+    }
+}

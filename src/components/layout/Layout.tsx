@@ -34,9 +34,7 @@ export default function Layout({ children }: { children?: React.ReactNode }) {
         />
         <link rel="manifest" href="/images/site.webmanifest"></link>
       </Helmet>
-      <Navbar />
-      {children}
-      <Footer />
+      <Navbar /> {children} <Footer />
     </>
   );
 }
