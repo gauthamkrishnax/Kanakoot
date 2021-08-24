@@ -1,6 +1,9 @@
 html,
 body {
     background-color: $teritiary;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 #gatsby-focus-wrapper {

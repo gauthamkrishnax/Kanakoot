@@ -23,6 +23,7 @@
 ![Contributors](https://img.shields.io/github/contributors/gauthamkrishnax/Kanakoot?color=dark-green)
 ![Issues](https://img.shields.io/github/issues/gauthamkrishnax/Kanakoot)
 ![License](https://img.shields.io/github/license/gauthamkrishnax/Kanakoot)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/020f05d4-5552-4947-870d-fd50a20263b7/deploy-status)](https://app.netlify.com/sites/kanakoot/deploys)
 <img src="https://img.shields.io/website-up-down-green-red/http//kanakoot.netlify.app"/>
 ![Follow](https://img.shields.io/github/followers/gauthamkrishnax.svg?style=social&label=Follow&maxAge=2592000)
 <a href="https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Fgauthamkrishnax%2FKanakoot"><img src="https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Fgauthamkrishnax%2FKanakoot"/></a>
