@@ -9,6 +9,7 @@ import ErrorBoundary from "../components/layout/ErrorBoundary";
 import LogoMark from "../assets/LogoMark.svg";
 
 import * as style from "../styles/components/calculator.module.scss";
+import Layout from "../components/layout/Layout";
 
 export interface Person {
   name: string;
@@ -31,22 +32,24 @@ const CalculatorPage = () => {
   const report = useStateWithDispatch<ReportInterface | null>(null);
   const contextData = { data: data, report: report };
   return (
-    <main>
-      <calculatorContext.Provider value={contextData}>
-        <ErrorBoundary>
-          <div className={style.container}>
-            <div className={style.expenseFromAndDetails}>
-              <Expenses />
-              <IndividualExpenseDetails />
+    <Layout>
+      <main>
+        <calculatorContext.Provider value={contextData}>
+          <ErrorBoundary>
+            <div className={style.container}>
+              <div className={style.expenseFromAndDetails}>
+                <Expenses />
+                <IndividualExpenseDetails />
+              </div>
+              <Report />
             </div>
-            <Report />
-          </div>
-        </ErrorBoundary>
-      </calculatorContext.Provider>
-      <div className="calculator-bg-logo">
-        <img src={LogoMark} alt="kanakoot logo faded" />
-      </div>
-    </main>
+          </ErrorBoundary>
+        </calculatorContext.Provider>
+        <div className="calculator-bg-logo">
+          <img src={LogoMark} alt="kanakoot logo faded" />
+        </div>
+      </main>
+    </Layout>
   );
 };
 

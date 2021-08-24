@@ -2,11 +2,12 @@ import * as React from "react";
 import { Link } from "gatsby";
 import * as style from "../styles/components/index.module.scss";
 import HeroImg from "../assets/illustration.inline.svg";
+import Layout from "../components/layout/Layout";
 
 // markup
 const IndexPage = () => {
   return (
-    <>
+    <Layout>
       <main>
         {/* <div  */}
         {/* </div> */}
@@ -35,7 +36,7 @@ const IndexPage = () => {
         </div>
       </main>
       <HeroImg className="shapesIllu" />
-    </>
+    </Layout>
   );
 };
 
